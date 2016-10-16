@@ -9,6 +9,6 @@ img.onclick = function(){
     
     
     
-}
+};
 
 
