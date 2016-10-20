@@ -1,6 +1,6 @@
 console.log('Loaded!');
 var ele =document.getElementById('min');
-ele.innerHTML="new value" ; 
+ele.innerHTML="Hey i am new value" ; 
 
 //Change the img poistion
 var img= document.getElementById('madi');
