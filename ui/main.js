@@ -6,12 +6,13 @@ ele.innerHTML="Hey i am new value" ;
 var img= document.getElementById('madi');
 var marginLeft = 0 ;
 function moveRight(){
-    marginLeft = marginLeft+5 ; 
+    console.log("gkgk");
+    marginLeft = marginLeft +5 ; 
     img.style.marginLeft = marginLeft + ' px' ;
 }
 
 img.onclick = function(){
-    console.log("gkgk");
+    
     var interval = setInterval(moveRight,100);
 };
 
