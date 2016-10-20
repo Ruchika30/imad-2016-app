@@ -11,6 +11,7 @@ function moveRight(){
 }
 
 img.onclick = function(){
+    concole.log("gkgk");
     var interval = setInterval(moveRight,100);
 };
 
