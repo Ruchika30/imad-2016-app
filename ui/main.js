@@ -7,7 +7,7 @@ var img= document.getElementById('madi');
 var marginLeft = 0 ;
 function moveRight(){
     console.log("gkgk");
-    marginLeft = marginLeft +5 ; 
+    marginLeft = marginLeft +20 ; 
     img.style.marginLeft = marginLeft + ' px' ;
 }
 
