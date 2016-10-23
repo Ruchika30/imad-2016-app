@@ -5,7 +5,8 @@ ele.innerHTML="Hey i am new value" ;
 //Change the img poistion
 var img= document.getElementById('madi');
 var marginLeft = 0 ;
-function moveRight(){
+
+function moveLeft(){
     console.log("gkgk");
     marginLeft = marginLeft +20 ; 
     img.style.marginLeft = marginLeft + ' px' ;
@@ -13,7 +14,7 @@ function moveRight(){
 
 img.onclick = function(){
     
-    var interval = setInterval(moveRight(),1000);
+    var interval = setInterval(moveLeftt,100);
 };
 
 
