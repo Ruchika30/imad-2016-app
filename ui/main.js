@@ -9,7 +9,7 @@ var marginLeft = 0 ;
 function moveLeft(){
     console.log("gkgk");
     marginLeft = marginLeft +20 ; 
-    img.style.marginLeft = marginLeft + ' px' ;
+    img.style.marginLeft = marginLeft + 'px' ;
 }
 
 img.onclick = function(){
