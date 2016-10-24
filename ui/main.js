@@ -27,12 +27,10 @@ button.onclick = function(){
     
     //Render the variable in index
     
-    counter  =counter +1;
+    counter = counter + 1;
     var span =  document.getElementById('count');
     span.innerHTML = counter.toString();
-    
-    
-    
+
 };
 
 
