@@ -40,7 +40,7 @@ button.onclick = function(){
      }
     };
     // AMke the request
-    request.open('GET','http://ruchika30.imad.hasura-app.io/',true);
+    request.open('GET','http://ruchika30.imad.hasura-app.io/counter',true);
     request.send(null);
     
 };
