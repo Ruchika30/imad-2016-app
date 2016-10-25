@@ -26,11 +26,23 @@ button.onclick = function(){
     //Capture the response in variable 
     
     //Render the variable in index
+    //Create request
+    var request  = new XMLHttpRequest();
     
-    counter = counter + 1;
-    var span =  document.getElementById('count');
+    request.onreadystatechange = function(){
+     if(request.readyState === XMLHttpRequest.DONE)   {
+         if(request.status === 200){
+            var counter  = request.responseText;
+          var span =  document.getElementById('count');
     span.innerHTML = counter.toString();
 
+         }
+     }
+    };
+    // AMke the request
+    request.open('GET','http://ruchika30.imad.hasura-app.io/',true);
+    request.send(null);
+    
 };
 
 
