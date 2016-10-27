@@ -45,8 +45,7 @@ button.onclick = function(){
 };
 
 //Submit button
-    var nameInput = document.getElementById('name');
-    var skills = nameInput.value;
+   
     var submit = document.getElementById('submit_btn');
    
     submit.onclick  = function(){
@@ -75,8 +74,9 @@ button.onclick = function(){
       
         
     };
-
-  request.open('GET','http://ruchika30.imad.hasura-app.io/submit-name?name='+ name,true);
+  var nameInput = document.getElementById('name');
+  var skills = nameInput.value;
+  request.open('GET','http://ruchika30.imad.hasura-app.io/submit-name?name='+ skills,true);
   request.send(null);
     };
 
