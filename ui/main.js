@@ -54,7 +54,7 @@ button.onclick = function(){
       var list='';
       
       for(var i=0;i < skills.length; i++){
-          list += '<li>'+names[i]+'</li>';
+          list += '<li>'+skills[i]+'</li>';
       }
       var ul  = document.getElementById('namelist');
       ul.innerHTML = list;
