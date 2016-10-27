@@ -48,9 +48,20 @@ button.onclick = function(){
     var nameInput = document.getElementById('name');
     var skills = nameInput.value;
     var submit = document.getElementById('submit_btn');
+   
     submit.onclick  = function(){
-      //make request to render a list
-      var skills = ['coding','dancing','python','learner'];
+    
+    var request  = new XMLHttpRequest();
+    
+    request.onreadystatechange = function(){
+     if(request.readyState === XMLHttpRequest.DONE)   {
+         
+         if(request.status === 200){//make request to render a list
+      
+      
+      
+      var skills = request.responseText;
+      skills = JSON.parse(skills);
       var list='';
       
       for(var i=0;i < skills.length; i++){
@@ -59,11 +70,15 @@ button.onclick = function(){
       var ul  = document.getElementById('namelist');
       ul.innerHTML = list;
       
+         }}
+      
       
         
     };
 
-
+  request.open('GET','http://ruchika30.imad.hasura-app.io/submit-name?name='+ name,true);
+  request.send(null);
+    };
 
 
 
