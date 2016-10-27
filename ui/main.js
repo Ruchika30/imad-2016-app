@@ -17,9 +17,8 @@ img.onclick = function(){
     var interval = setInterval(moveLeft,100);
 };*/
  
- 
+ // NORMMAL BUTTON
 var button = document.getElementById('counter');
-
 button.onclick = function(){
     // make request to counter varibale
     //Capture the response in variable 
@@ -44,10 +43,8 @@ button.onclick = function(){
     
 };
 
-//Submit button
-   
+    //Submit button
     var submit = document.getElementById('submit_btn');
-   
     submit.onclick  = function(){
     
     var request  = new XMLHttpRequest();
