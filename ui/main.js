@@ -22,9 +22,7 @@ var button = document.getElementById('counter');
 
 button.onclick = function(){
     // make request to counter varibale
-    
     //Capture the response in variable 
-    
     //Render the variable in index
     //Create request
     var request  = new XMLHttpRequest();
@@ -45,6 +43,54 @@ button.onclick = function(){
     request.send(null);
     
 };
+
+//Submit button
+    var nameInput = document.getElementById('name');
+    var skills = nameInput.value;
+    var submit = document.getElementById('submit_btn');
+    submit.onclick  = function(){
+      //make request to render a list
+      var skills = ['coding','dancing','python','learner'];
+      var list='';
+      
+      for(var i=0;i < skills.length; i++){
+          list += '<li>'+names(i)+'</li>';
+      }
+      var ul  = document.getElementById('namelist');
+      ul.innerHTML = list;
+      
+      
+        
+    };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
