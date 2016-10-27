@@ -70,15 +70,12 @@ button.onclick = function(){
       ul.innerHTML = list;
       
          }}
-      
-      
-        
     };
-  var nameInput = document.getElementById('name');
-  var skills = nameInput.value;
-  request.open('GET','http://ruchika30.imad.hasura-app.io/submit-name?name='+ skills,true);
-  request.send(null);
-    };
+      var nameInput = document.getElementById('name');
+      var skills = nameInput.value;
+      request.open('GET','http://ruchika30.imad.hasura-app.io/submit-name?name='+ skills,true);
+      request.send(null);
+        };
 
 
 
