@@ -18,8 +18,18 @@ app.get('/counter', function (req, res) {
 });
 
 
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+});
+
+var names = [] ;
+app.get('/submit-name/:name',function (req,res){
+    //get name from 
+    var name= req.query.name;
+    names.push(name);
+    //JSON js objet notation
+    res.send(JSON.stringify(names));
 });
 
 app.get('/article-one', function (req, res) {
@@ -39,14 +49,7 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-var names = [] ;
-app.get('/submit-name/:name',function (req,res){
-    //get name from 
-    var name= req.query.name;
-    names.push(name);
-    //JSON js objet notation
-    res.send(JSON.stringify(names));
-});
+
 
 
 
