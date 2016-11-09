@@ -8,7 +8,7 @@ var config = {
     database : 'ruchika30',
     host  : 'db.imad.hasura-app.io';
     port  :'5432',
-    passowrd: process.env. DB_PASSWORD
+    passowrd: process.env.DB_PASSWORD;
     
 }
 
@@ -21,10 +21,10 @@ app.get('/', function (req, res) {
 
 //making endpoint for database connection
 var pool  = new Pool(config);
-app.get('/test-do',function(req,res){
+app.get('/test-db',function(req,res){
     //make req 
     //return res with results
-    pool.quert('Select * from test',func(err,results){
+    pool.quert('Select * from test',func(err,result){
         if(err){
             res.status(500).send(err.toString());
         }else{
