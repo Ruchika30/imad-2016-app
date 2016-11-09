@@ -52,7 +52,15 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-app.get('/article-one', function (req, res) {
+app.get('/articles/articleName', function (req, res) {
+    pool.query("Selelct * from article where title="+req.params.articleName,  function(err,result){
+        if(err){
+            res.status(500).send(err.toString());
+        
+    }
+        
+    });
+    
    res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
 });
 
@@ -87,7 +95,7 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
-
+;
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
   console.log(`IMAD course app listening on port ${port}!`);
