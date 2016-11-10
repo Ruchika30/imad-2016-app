@@ -3,6 +3,10 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
 
+
+var app = express();
+app.use(morgan('combined'));
+
 var config = {
     user : 'ruchika30',
     database : 'ruchika30',
@@ -12,9 +16,6 @@ var config = {
    // passowrd: process.env.DB_PASSWORD
     
 };
-
-var app = express();
-app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
