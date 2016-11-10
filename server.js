@@ -3,10 +3,6 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
 
-
-var app = express();
-app.use(morgan('combined'));
-
 var config = {
     user : 'ruchika30',
     database : 'ruchika30',
@@ -16,6 +12,9 @@ var config = {
    // passowrd: process.env.DB_PASSWORD
     
 };
+
+var app = express();
+app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -38,9 +37,6 @@ app.get('/test-db',function(req,res){
     
 });
 
-
-
-
 //Applying counter
 
 var counter = 0;
@@ -54,8 +50,8 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-app.get('/articles/articleName', function (req, res) {
-    pool.query("Selelct * from article where title="+req.params.articleName,  function(err,result){
+app.get('/articles/:articleName', function (req, res) {
+    pool.query("Select * from article where title="+req.params.articleName,  function(err,result){
         if(err){
             res.status(500).send(err.toString());
         
