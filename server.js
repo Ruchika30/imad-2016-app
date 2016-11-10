@@ -8,7 +8,8 @@ var config = {
     database : 'ruchika30',
     host  : 'db.imad.hasura-app.io',
     port  :'5432',
-    passowrd: process.env.DB_PASSWORD
+    passowrd:'db-ruchika30-34678'
+   // passowrd: process.env.DB_PASSWORD
     
 };
 
