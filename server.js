@@ -15,6 +15,11 @@ var config = {
 
 var app = express();
 app.use(morgan('combined'));
+{
+    
+}
+
+
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -25,7 +30,7 @@ var pool  = new Pool(config);
 app.get('/test-db',function(req,res){
     //make req 
     //return res with results
-    pool.query('Select * from test',function(err, result){
+    pool.query('Select * from artcleP',function(err, result){
         if(err){
             res.status(500).send(err.toString());
         }else{
