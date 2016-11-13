@@ -23,7 +23,12 @@ var articles={
         heading:'article-heading',
         date:'jan 4, 2016',
         content:'<p>helllo i am ruhcika</p>'
-    }
+    },
+    
+   
+    
+    
+    
 };
 
 app.get('/', function (req, res) {
