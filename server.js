@@ -1,9 +1,9 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var Pool = require('pg').Pool;
+var Pool = require('pg').Pool;   // DB
 
-var config = {
+var config = {                  //DB
     user : 'ruchika30',
     database : 'ruchika30',
     host  : 'db.imad.hasura-app.io',
@@ -39,7 +39,7 @@ app.get('/test-db',function(req,res){
         if(err){
             res.status(500).send(err.toString());
         }else{
-            res.send(JSON.stringify(result));
+            res.send(JSON.stringify(result.rows));
         }
         
         
