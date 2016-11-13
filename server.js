@@ -35,7 +35,7 @@ var pool  = new Pool(config);
 app.get('/test-db',function(req,res){
     //make req 
     //return res with results
-    pool.query('Select * from articlesP',function(err, result){
+    pool.query('Select * from articletable',function(err, result){
         if(err){
             res.status(500).send(err.toString());
         }else{
