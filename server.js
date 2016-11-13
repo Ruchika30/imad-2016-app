@@ -65,7 +65,7 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-app.get('/articles/:articleName', function (req, res) {
+app.get('/:articleName', function (req, res) {
     pool.query("Select * from articletable where title= '"+req.params.articleName+"' " ,  function(err,result){
         if(err){
             res.status(500).send(err.toString());
