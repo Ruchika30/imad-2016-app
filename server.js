@@ -15,11 +15,16 @@ var config = {
 
 var app = express();
 app.use(morgan('combined'));
-{
-    
+
+
+var articles={
+    'article-one':{
+        title:'ram',
+        heading:'article-heading',
+        date:'jan 4, 2016',
+        content:'<p>helllo i am ruhcika</p>'
+    }
 }
-
-
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
