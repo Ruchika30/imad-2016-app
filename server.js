@@ -24,7 +24,7 @@ var articles={
         date:'jan 4, 2016',
         content:'<p>helllo i am ruhcika</p>'
     }
-}
+};
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -61,10 +61,10 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 app.get('/articles/:articleName', function (req, res) {
-    pool.query("Select * from articles where title= '"+req.params.articleName+"'",  function(err,result){
+    pool.query("Select * from articles where title= "+req.params.articleName,  function(err,result){
         if(err){
             res.status(500).send(err.toString());
-        
+            
     }else{
         if(result.rows.length === 0){
                 res.status(404).send("artcicle not found");
