@@ -24,12 +24,21 @@ var articles={
         date:'jan 4, 2016',
         content:'<p>helllo i am ruhcika</p>'
     },
-    
-   
-    
-    
-    
 };
+
+function createtemplate (data){
+    var title = data.title;
+    var date= data.date;
+    var heading= data.heading;
+    var content= data.content;
+    
+    var htmlTemplate=
+        
+    
+    
+}
+
+
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
