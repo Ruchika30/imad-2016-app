@@ -67,7 +67,7 @@ img.onclick = function(){
       var submit = document.getElementById('submit_btn');
         submit.onclick  = function(){
             var skills = ['n1','1n2','n3'];
-            var lists = '';
+            var list = '';
              
              for(var i=0;i < skills.length; i++){
                   list += '<li>'+skills[i]+'</li>';
