@@ -42,47 +42,50 @@ img.onclick = function(){
     
 };
 
-    //Submit button
-    // var submit = document.getElementById('submit_btn');
-    // submit.onclick  = function(){
-    // var request  = new XMLHttpRequest();
-    // request.onreadystatechange = function(){
-    //  if(request.readyState === XMLHttpRequest.DONE)   {
-    //      if(request.status === 200){//make request to render a list
-    //           var skills = request.responseText;
-    //           skills = JSON.parse(skills);
-    //           var list='';
+   // Submit button
+    var submit = document.getElementById('submit_btn');
+    submit.onclick  = function(){
+    var request  = new XMLHttpRequest();
+    request.onreadystatechange = function(){
+     if(request.readyState === XMLHttpRequest.DONE)   {
+         if(request.status === 200){//make request to render a list
+              var skills = request.responseText;
+              skills = JSON.parse(skills);
+              var list='';
               
-    //           for(var i=0;i < skills.length; i++){
-    //               list += '<li>'+skills[i]+'</li>';
-    //       }
-    //       var ul  = document.getElementById('namelist');
-    //       ul.innerHTML = list;
-          
-    //      }}
-    // };
-    
-      var nameInput = document.getElementById('name');
-      var name = nameInput.value;
-      var submit = document.getElementById('submit_btn');
-        submit.onclick  = function(){
-            var skills = ['n1','1n2','n3'];
-            var list = '';
-             
-             for(var i=0;i < skills.length; i++){
+              for(var i=0;i < skills.length; i++){
                   list += '<li>'+skills[i]+'</li>';
           }
-            var ul  = document.getElementById('namelist');
+          var ul  = document.getElementById('namelist');
           ul.innerHTML = list;
-        };
+          
+         }}
+    };
+     
+      request.open('GET','http://ruchika30.imad.hasura-app.io/submit-name?name='+ skills,true);
+      request.send(null);
+    };
+
+    
+    
+    /// DISPLAYING LIST THAT IS PREDEFINED
+    //   var nameInput = document.getElementById('name');
+    //   var name = nameInput.value;
+    //   var submit = document.getElementById('submit_btn');
+    //     submit.onclick  = function(){
+    //         var skills = ['n1','1n2','n3'];
+    //         var list = '';
+             
+    //          for(var i=0;i < skills.length; i++){
+    //               list += '<li>'+skills[i]+'</li>';
+    //       }
+    //         var ul  = document.getElementById('namelist');
+    //       ul.innerHTML = list;
+    //     };
             
         
       
-      
-    //   request.open('GET','http://ruchika30.imad.hasura-app.io/submit-name?name='+ skills,true);
-    //   request.send(null);
-    
-
+     
 
 
 
