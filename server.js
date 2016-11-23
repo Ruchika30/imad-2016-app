@@ -114,11 +114,6 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:articleName', function (req, res) {
-    //articlename is a var== articleone/ articletwo etc to extract these from article object
-    var articleName = req.params.articleName;
-  res.send(createtemplate(articles[articleName]));
-});
 
 
 
@@ -137,6 +132,13 @@ app.get('/test-db',function(req,res){
         
     });
     
+});
+
+
+app.get('/:articleName', function (req, res) {
+    //articlename is a var== articleone/ articletwo etc to extract these from article object
+    var articleName = req.params.articleName;
+  res.send(createtemplate(articles[articleName]));
 });
 
 //Applying counter
@@ -176,12 +178,13 @@ app.get('/ui/madi.png', function (req, res) {
 
 
 /////////// CREATES URL ENDPOINT
-//////// METHOD -1 ---- SENDING THRU URLS
+//////// METHOD -1 ---- SENDING THRU URLS. Taking the parameters
 ///// SENDING ARRAYS 
 var names = [];
 app.get('/submit-name/:name', function(req, res) {   // /submit-name?name=xxxx
   // Get the name from the request
-  var name = req.params.name;
+  //var name = req.params.name;        ------ for method 1
+  var name = req.query.name;            // METHOD 2 - THRU QUERY PARA
   names.push(name);
   // JSON: Javascript Object Notation
   res.send(JSON.stringify(names));
