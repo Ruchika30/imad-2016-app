@@ -81,7 +81,7 @@ img.onclick = function(){
       
     //   request.open('GET','http://ruchika30.imad.hasura-app.io/submit-name?name='+ skills,true);
     //   request.send(null);
-        };
+    
 
 
 
