@@ -17,7 +17,7 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var content ={
+var articleone ={
     
         title:'ram',
         heading:'article-heading',
@@ -34,6 +34,8 @@ var content ={
         
 
 };
+
+var htmltemplate  =
 
 
 
