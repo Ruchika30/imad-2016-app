@@ -44,11 +44,10 @@ img.onclick = function(){
 
    // Submit button
    var nameInput = document.getElementById('name');
-   var name = nameInput.value;
-   console.log(name);
-   var submit = document.getElementById('submit_btn');
+    var submit = document.getElementById('submit_btn');
     submit.onclick  = function(){
-        
+    
+    var name = nameInput.value;
     var request  = new XMLHttpRequest();
     request.onreadystatechange = function(){
         
