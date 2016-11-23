@@ -40,7 +40,7 @@ var htmltemplate  =
 <html>
     <head>
     <title>
-        hello web appp
+       $(title)
     </title>
     <meta name= "viewport" content= "wihdhhd-skdkk , initial-scale=1"/>
     <link href= "/ui/Style.css" rel ="stylesheet" />
