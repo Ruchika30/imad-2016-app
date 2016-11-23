@@ -16,59 +16,59 @@ var config = {                  //DB
 var app = express();
 app.use(morgan('combined'));
 
-
-var articleone ={
-    
-        title:'ram',
-        heading:'article-heading',
-        date:'jan 4, 2016',
-        content:`<p>
-        helllo i am ruhcika<. you dont know me. I am the one who
-        does it all. helllo i am ruhcika<. you dont know me. I am the one who
-        does it all.helllo i am ruhcika<. you dont know me. I am the one who
-        does it all.helllo i am ruhcika<. you dont know me. I am the one who
-        does it all.helllo i am ruhcika<. you dont know me. I am the one who
-        does it all.helllo i am ruhcika<. you dont know me. I am the one who
-        does it all.
-        </p>`
+var articles = {
+    var articleone :{
         
-
-};
-var articletwo ={
+            title:'ram',
+            heading:'article-heading',
+            date:'jan 4, 2016',
+            content:`<p>
+            helllo i am ruhcika<. you dont know me. I am the one who
+            does it all. helllo i am ruhcika<. you dont know me. I am the one who
+            does it all.helllo i am ruhcika<. you dont know me. I am the one who
+            does it all.helllo i am ruhcika<. you dont know me. I am the one who
+            does it all.helllo i am ruhcika<. you dont know me. I am the one who
+            does it all.helllo i am ruhcika<. you dont know me. I am the one who
+            does it all.
+            </p>`
+            
     
-        title:'ram',
-        heading:'article-heading',
-        date:'jan 4, 2016',
-        content:`<p>
-        helllo i am ruhcika<. you dont know me. I am the one who
-        does it all. helllo i am ruhcika<. you dont know me. I am the one who
-        does it all.helllo i am ruhcika<. you dont know me. I am the one who
-        does it all.helllo i am ruhcika<. you dont know me. I am the one who
-        does it all.helllo i am ruhcika<. you dont know me. I am the one who
-        does it all.helllo i am ruhcika<. you dont know me. I am the one who
-        does it all.
-        </p>`
+    },
+    var articletwo :{
         
-
-};
-var articlethree ={
+            title:'ram',
+            heading:'article-heading',
+            date:'jan 4, 2016',
+            content:`<p>
+            helllo i am ruhcika<. you dont know me. I am the one who
+            does it all. helllo i am ruhcika<. you dont know me. I am the one who
+            does it all.helllo i am ruhcika<. you dont know me. I am the one who
+            does it all.helllo i am ruhcika<. you dont know me. I am the one who
+            does it all.helllo i am ruhcika<. you dont know me. I am the one who
+            does it all.helllo i am ruhcika<. you dont know me. I am the one who
+            does it all.
+            </p>`
+            
     
-        title:'ram',
-        heading:'article-heading',
-        date:'jan 4, 2016',
-        content:`<p>
-        helllo i am ruhcika<. you dont know me. I am the one who
-        does it all. helllo i am ruhcika<. you dont know me. I am the one who
-        does it all.helllo i am ruhcika<. you dont know me. I am the one who
-        does it all.helllo i am ruhcika<. you dont know me. I am the one who
-        does it all.helllo i am ruhcika<. you dont know me. I am the one who
-        does it all.helllo i am ruhcika<. you dont know me. I am the one who
-        does it all.
-        </p>`
+    },
+    var articlethree :{
         
-
+            title:'ram',
+            heading:'article-heading',
+            date:'jan 4, 2016',
+            content:`<p>
+            helllo i am ruhcika<. you dont know me. I am the one who
+            does it all. helllo i am ruhcika<. you dont know me. I am the one who
+            does it all.helllo i am ruhcika<. you dont know me. I am the one who
+            does it all.helllo i am ruhcika<. you dont know me. I am the one who
+            does it all.helllo i am ruhcika<. you dont know me. I am the one who
+            does it all.helllo i am ruhcika<. you dont know me. I am the one who
+            does it all.
+            </p>`
+            
+    
+    }
 };
-
 
 function createtemplate(data){
      var title=data.title;
@@ -99,13 +99,6 @@ function createtemplate(data){
                            ${date}
                         </div>
                         <div>
-                            computer
-                        </div>
-                        <div>
-                            designing love
-                        </div>
-                       
-                        <div>
                            ${content}
                         </div>
                 </div>
@@ -121,8 +114,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function (req, res) {
-  res.send(createtemplate(articleone))
+app.get('/:articleName', function (req, res) {
+    //articlename is a var== article-one/ article-two etc
+  res.send(createtemplate())
 });
 
 
