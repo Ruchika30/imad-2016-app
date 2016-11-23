@@ -35,53 +35,63 @@ var articleone ={
 
 };
 
-var htmltemplate  =
 
-<html>
-    <head>
-    <title>
-       $(title)
-    </title>
-    <meta name= "viewport" content= "wihdhhd-skdkk , initial-scale=1"/>
-    <link href= "/ui/Style.css" rel ="stylesheet" />
-    </head>
-    <body>
-        <div class="container">
-            
-              <div>
-                    <a href="/">Home</a>
+function createtemplate(data)={
+     var title=data.title;
+     var heading=data.heading;
+     var  date=data.date;
+     var content=data.content;
+     
+        var htmltemplate  =
+        
+        <html>
+            <head>
+            <title>
+               $(title)
+            </title>
+            <meta name= "viewport" content= "wihdhhd-skdkk , initial-scale=1"/>
+            <link href= "/ui/Style.css" rel ="stylesheet" />
+            </head>
+            <body>
+                <div class="container">
+                    
+                      <div>
+                            <a href="/">Home</a>
+                        </div>
+                        <div>
+                            $(heading)
+                        </div>
+                        <div>
+                           $(date)
+                        </div>
+                        <div>
+                            computer
+                        </div>
+                        <div>
+                            designing love
+                        </div>
+                       
+                        <div>
+                           $(content)
+                        </div>
                 </div>
-                <div>
-                    $(heading)
-                </div>
-                <div>
-                   $(date)
-                </div>
-                <div>
-                    computer
-                </div>
-                <div>
-                    designing love
-                </div>
-               
-                <div>
-                   $(content)
-                </div>
-                
-                
-        </div>
-    </body>
-    
-   
-</html>
+            </body>
+        </html>;
+        return htmltemplate;
 
-
+}
 
 
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+
+app.get('/article-one', function (req, res) {
+  res.sendFile(createtemplate(articleone))
+});
+
+
 
 //making endpoint for database connection
 var pool  = new Pool(config);
