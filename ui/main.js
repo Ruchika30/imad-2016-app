@@ -43,7 +43,9 @@ img.onclick = function(){
 };
 
    // Submit button
-    var submit = document.getElementById('submit_btn');
+   var nameInput = document.getElementById('name');
+   var name = nameInput.value;
+   var submit = document.getElementById('submit_btn');
     submit.onclick  = function(){
     var request  = new XMLHttpRequest();
     request.onreadystatechange = function(){
