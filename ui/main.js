@@ -51,7 +51,7 @@ img.onclick = function(){
     var request  = new XMLHttpRequest();
     request.onreadystatechange = function(){
         
-     if(request.readyState === XMLHttpRequest.DONE)   {
+     if(request.readyState === 4)   {
          if(request.status === 200){//make request to render a list
               var names  = request.responseText;
               names = JSON.parse(skills);               // to convert string to object
