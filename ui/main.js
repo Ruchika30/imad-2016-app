@@ -18,7 +18,7 @@ img.onclick = function(){
 };*/
  
      // NORMMAL BUTTON
-    var button = document.getElementById('counter');
+    var button = document.getElementById('counter'); //button id is counter
     button.onclick = function(){
     // make request to counter varibale
     //Capture the response in variable 
@@ -28,10 +28,11 @@ img.onclick = function(){
     
     request.onreadystatechange = function(){
      if(request.readyState === XMLHttpRequest.DONE)   {
-           if(request.status === 200){
-                var counter  = request.responseText;
-                var span =  document.getElementById('count');
-                 span.innerHTML = counter.toString();
+           if(request.status === 200){                        // if successful
+               
+                var counter  = request.responseText;          // take response & put in counter var
+                var span =  document.getElementById('count'); // select span tag
+                 span.innerHTML = counter.toString();        // put the value in span
          }
      }
     };
