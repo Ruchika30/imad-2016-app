@@ -37,6 +37,44 @@ var articleone ={
 
 var htmltemplate  =
 
+<html>
+    <head>
+    <title>
+        hello web appp
+    </title>
+    <meta name= "viewport" content= "wihdhhd-skdkk , initial-scale=1"/>
+    <link href= "/ui/Style.css" rel ="stylesheet" />
+    </head>
+    <body>
+        <div class="container">
+            
+              <div>
+                    <a href="/">Home</a>
+                </div>
+                <div>
+                    $(heading)
+                </div>
+                <div>
+                   $(date)
+                </div>
+                <div>
+                    computer
+                </div>
+                <div>
+                    designing love
+                </div>
+               
+                <div>
+                   $(content)
+                </div>
+                
+                
+        </div>
+    </body>
+    
+   
+</html>
+
 
 
 
