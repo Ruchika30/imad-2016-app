@@ -59,7 +59,7 @@ img.onclick = function(){
               var list='';
               
               for(var i=0;i < skills.length; i++){
-                  list +- '<li>'+skills[i]+'</li>';
+                  list += '<li>'+skills[i]+'</li>';
           }
           var ul  = document.getElementById('namelist');
           ul.innerHTML = list;
@@ -67,7 +67,7 @@ img.onclick = function(){
          }}
     };
      
-      request.open('GET','http://ruchika30.imad.hasura-app.io/submit-name?name-' + name,true);
+      request.open('GET','http://ruchika30.imad.hasura-app.io/submit-name?name=' + name,true);
       request.send(null);
     };
 
