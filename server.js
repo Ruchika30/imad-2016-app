@@ -47,7 +47,7 @@ function createtemplate(data){
         <html>
             <head>
             <title>
-               $(title)
+               ${title}
             </title>
             <meta name= "viewport" content= "wihdhhd-skdkk , initial-scale=1"/>
             <link href= "/ui/Style.css" rel ="stylesheet" />
@@ -59,10 +59,10 @@ function createtemplate(data){
                             <a href="/">Home</a>
                         </div>
                         <div>
-                            $(heading)
+                            ${heading}
                         </div>
                         <div>
-                           $(date)
+                           ${date}
                         </div>
                         <div>
                             computer
@@ -72,7 +72,7 @@ function createtemplate(data){
                         </div>
                        
                         <div>
-                           $(content)
+                           ${content}
                         </div>
                 </div>
             </body>
