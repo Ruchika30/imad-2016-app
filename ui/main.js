@@ -24,7 +24,7 @@ img.onclick = function(){
     //Capture the response in variable 
     //Render the variable in index
     //Create request
-     request  = new XMLHttpRequest();
+    var request  = new XMLHttpRequest();
     
     request.onreadystatechange = function(){
      if(request.readyState === XMLHttpRequest.DONE)   {
@@ -38,7 +38,7 @@ img.onclick = function(){
     };
     // make  the request
     request.open('GET','http://ruchika30.imad.hasura-app.io/counter',true);
-    request.send(null);
+    request.send();
     
 };
 
@@ -48,7 +48,7 @@ img.onclick = function(){
    
     sub.onclick  = function(){
         
-     request  = new XMLHttpRequest();
+    var request  = new XMLHttpRequest();
     request.onreadystatechange = function(){
         
      if(request.readyState === XMLHttpRequest.DONE)   {
@@ -68,7 +68,7 @@ img.onclick = function(){
        var nameInput = document.getElementById('name'); 
        var name = nameInput.value;
       request.open('GET','http://ruchika30.imad.hasura-app.io/submit-name?name=' + name,true);
-      request.send(null);
+      request.send();
     };
 
     
