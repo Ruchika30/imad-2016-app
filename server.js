@@ -34,6 +34,40 @@ var articleone ={
         
 
 };
+var articletwo ={
+    
+        title:'ram',
+        heading:'article-heading',
+        date:'jan 4, 2016',
+        content:`<p>
+        helllo i am ruhcika<. you dont know me. I am the one who
+        does it all. helllo i am ruhcika<. you dont know me. I am the one who
+        does it all.helllo i am ruhcika<. you dont know me. I am the one who
+        does it all.helllo i am ruhcika<. you dont know me. I am the one who
+        does it all.helllo i am ruhcika<. you dont know me. I am the one who
+        does it all.helllo i am ruhcika<. you dont know me. I am the one who
+        does it all.
+        </p>`
+        
+
+};
+var articlethree ={
+    
+        title:'ram',
+        heading:'article-heading',
+        date:'jan 4, 2016',
+        content:`<p>
+        helllo i am ruhcika<. you dont know me. I am the one who
+        does it all. helllo i am ruhcika<. you dont know me. I am the one who
+        does it all.helllo i am ruhcika<. you dont know me. I am the one who
+        does it all.helllo i am ruhcika<. you dont know me. I am the one who
+        does it all.helllo i am ruhcika<. you dont know me. I am the one who
+        does it all.helllo i am ruhcika<. you dont know me. I am the one who
+        does it all.
+        </p>`
+        
+
+};
 
 
 function createtemplate(data){
