@@ -36,7 +36,7 @@ var articles = {
     },
      'articletwo' :{
         
-            title:'ram',
+            title:'two',
             heading:'article-heading',
             date:'jan 4, 2016',
             content:`<p>
@@ -53,7 +53,7 @@ var articles = {
     },
      'articlethree' :{
         
-            title:'ram',
+            title:'three',
             heading:'article-heading',
             date:'jan 4, 2016',
             content:`<p>
