@@ -53,12 +53,12 @@ img.onclick = function(){
         
      if(request.readyState === XMLHttpRequest.DONE)   {
          if(request.status === 200){//make request to render a list
-              var skills = request.responseText;
-              skills = JSON.parse(skills);               // to convert string to object
+              var names  = request.responseText;
+              names = JSON.parse(skills);               // to convert string to object
               var list='';
               
-              for(var i=0;i < skills.length; i++){
-                  list += '<li>'+skills[i]+'</li>';
+              for(var i=0;i < names.length; i++){
+                  list += '<li>'+ names[i] +'</li>';
           }
           var ul  = document.getElementById('namelist');
           ul.innerHTML = list;
