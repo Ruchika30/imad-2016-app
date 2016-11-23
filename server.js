@@ -8,7 +8,7 @@ var config = {                  //DB
     database : 'ruchika30',
     host  : 'db.imad.hasura-app.io',
     port  :'5432',
-    password:'db-ruchika30-34678',
+    password:'db-ruchika30-34678', 
    // passowrd: process.env.DB_PASSWORD
     
 };
@@ -17,13 +17,22 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articles={
-    'article-one':{
+var content ={
+    
         title:'ram',
         heading:'article-heading',
         date:'jan 4, 2016',
-        content:'<p>helllo i am ruhcika</p>'
-    },
+        content:`<p>
+        helllo i am ruhcika<. you dont know me. I am the one who
+        does it all. helllo i am ruhcika<. you dont know me. I am the one who
+        does it all.helllo i am ruhcika<. you dont know me. I am the one who
+        does it all.helllo i am ruhcika<. you dont know me. I am the one who
+        does it all.helllo i am ruhcika<. you dont know me. I am the one who
+        does it all.helllo i am ruhcika<. you dont know me. I am the one who
+        does it all.
+        </p>`
+        
+
 };
 
 
