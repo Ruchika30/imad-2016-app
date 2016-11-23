@@ -115,7 +115,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/:articleName', function (req, res) {
-    //articlename is a var== article-one/ article-two etc
+    //articlename is a var== articleone/ articletwo etc to extract these from article object
     var articleName = req.params.articleName;
   res.send(createtemplate(articles[articleName]));
 });
@@ -168,13 +168,6 @@ app.get('/:articleName', function (req, res) {
     });
 });
 
-app.get('/article-two', function (req, res) {
-  res.send("article 2 sent");
-});
-
-app.get('/article-three', function (req, res) {
-  res.send("article 3 sent");
-});
 
 
 app.get('/ui/madi.png', function (req, res) {
