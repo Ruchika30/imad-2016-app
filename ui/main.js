@@ -44,9 +44,9 @@ img.onclick = function(){
 
    // Submit button
    
-    var button = document.getElementById('submit_btn');
+    var sub = document.getElementById('submit_btn');
    
-    button.onclick  = function(){
+    sub.onclick  = function(){
         
     var request  = new XMLHttpRequest();
     request.onreadystatechange = function(){
