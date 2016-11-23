@@ -63,10 +63,10 @@ img.onclick = function(){
     // };
     
       var nameInput = document.getElementById('name');
-      var skill = nameInput.value;
+      var name = nameInput.value;
       var submit = document.getElementById('submit_btn');
         submit.onclick  = function(){
-            var skills = ['n1,1n2,n3'];
+            var skills = ['n1','1n2','n3'];
             var lists = '';
              
              for(var i=0;i < skills.length; i++){
