@@ -50,7 +50,7 @@ img.onclick = function(){
      if(request.readyState === XMLHttpRequest.DONE)   {
          if(request.status === 200){//make request to render a list
               var skills = request.responseText;
-              skills = JSON.parse(skills);
+              skills = JSON.parse(skills);               // to convert string to object
               var list='';
               
               for(var i=0;i < skills.length; i++){
