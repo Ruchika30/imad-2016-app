@@ -24,7 +24,7 @@ img.onclick = function(){
     //Capture the response in variable 
     //Render the variable in index
     //Create request
-    var request  = new XMLHttpRequest();
+     request  = new XMLHttpRequest();
     
     request.onreadystatechange = function(){
      if(request.readyState === XMLHttpRequest.DONE)   {
@@ -48,7 +48,7 @@ img.onclick = function(){
    
     sub.onclick  = function(){
         
-    var request  = new XMLHttpRequest();
+     request  = new XMLHttpRequest();
     request.onreadystatechange = function(){
         
      if(request.readyState === XMLHttpRequest.DONE)   {
