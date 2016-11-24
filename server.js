@@ -120,7 +120,7 @@ app.get('/', function (req, res) {
 //////// METHOD -1 ---- SENDING THRU URLS. Taking the parameters
 ///// SENDING ARRAYS 
 var names = [];
-app.get('/submit-name/:name', function(req, res) {   // /submit-name?name=xxxx
+app.get('/submit-name', function(req, res) {   // /submit-name?name=xxxx
   // Get the name from the request
   //var name = req.params.name;        ------ for method 1
   var name = req.query.name;            // METHOD 2 - THRU QUERY PARA
